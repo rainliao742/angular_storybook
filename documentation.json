@@ -226,6 +226,178 @@
             }
         },
         {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-cf1c4a7423857e1c60c9ab33801746a143f71ff644b13ac74000db340e3519290f1029c32471e2a902d0ea16680f93cc93ba4cb5c3aaf29f80b5d50e2428aed7-1",
+            "file": "src/app/components/button/button.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-button",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./button.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'md'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "ButtonSize",
+                    "decorators": []
+                },
+                {
+                    "name": "variant",
+                    "defaultValue": "'primary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "ButtonVariant",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nexport type ButtonVariant = 'primary' | 'secondary' | 'nav-cta';\nexport type ButtonSize = 'sm' | 'md' | 'lg';\n\n@Component({\n  selector: 'app-button',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './button.html',\n  styleUrl: './button.scss',\n})\nexport class ButtonComponent {\n  @Input() variant: ButtonVariant = 'primary';\n  @Input() size: ButtonSize = 'md';\n  @Input() label: string = 'Button';\n  @Input() disabled: boolean = false;\n}\n",
+            "styleUrl": "./button.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "ButtonComponent-1",
+            "templateData": "<button\n  class=\"btn\"\n  [class]=\"'btn btn--' + variant + ' btn--' + size\"\n  [disabled]=\"disabled\"\n>\n  {{ label }}\n</button>\n"
+        },
+        {
+            "name": "CardComponent",
+            "id": "component-CardComponent-fa290f88bf5b3bc1759dc54b82b6c5e5c03005d0215808dc5a135388584a9964a81a6e0791a493167b886026149bba2c090413e2e81fe62f1a7581ed2f6e721b",
+            "file": "src/app/components/card/card.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-card",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./card.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "description",
+                    "defaultValue": "'Card description text.'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'large'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "CardSize",
+                    "decorators": []
+                },
+                {
+                    "name": "tag",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "title",
+                    "defaultValue": "'Card Title'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "variant",
+                    "defaultValue": "'default'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "CardVariant",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nexport type CardSize = 'large' | 'small';\nexport type CardVariant = 'default' | 'alt';\n\n@Component({\n  selector: 'app-card',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './card.html',\n  styleUrl: './card.scss',\n})\nexport class CardComponent {\n  @Input() size: CardSize = 'large';\n  @Input() variant: CardVariant = 'default';\n  @Input() title: string = 'Card Title';\n  @Input() description: string = 'Card description text.';\n  @Input() tag: string = '';\n}\n",
+            "styleUrl": "./card.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"card\" [class]=\"'card--' + size + ' card--' + variant\">\n  @if (tag) {\n    <span class=\"card__tag\">{{ tag }}</span>\n  }\n  <h3 class=\"card__title\">{{ title }}</h3>\n  <p class=\"card__description\">{{ description }}</p>\n</div>\n"
+        },
+        {
             "name": "HeaderComponent",
             "id": "component-HeaderComponent-48b9abe37706bc42f20cfa97ed9f943678344ea7d254c0c82183c657750c2191b43486fe730c778627b2ea6aa0e2f33a7abcf3ce08b68ad18b062ad99ea97acb",
             "file": "src/stories/header.component.ts",
@@ -310,6 +482,44 @@
             ],
             "stylesData": "",
             "extends": []
+        },
+        {
+            "name": "NavLink",
+            "id": "component-NavLink-6033747d5a5e87295b3850349dfe6b91549605798d191d83449292d5c09bf959fe3b8220988a472126a1fa50fac86f402ef1b59ef041b480a730e0530ad9ebde",
+            "file": "src/app/components/nav-link/nav-link.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-nav-link",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./nav-link.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-nav-link',\n  imports: [],\n  templateUrl: './nav-link.html',\n  styleUrl: './nav-link.scss',\n})\nexport class NavLink {}\n",
+            "styleUrl": "./nav-link.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<p>nav-link works!</p>\n"
         },
         {
             "name": "PageComponent",
@@ -404,6 +614,63 @@
             ],
             "stylesData": "",
             "extends": []
+        },
+        {
+            "name": "StatItemComponent",
+            "id": "component-StatItemComponent-acdfd32b0986231678ffcc96734cb8577ac26a5bcfdddf3e14b2bbe7936b2bd1380e3196db31b289157739da429a74f8cae58108d14dc4061d98817343fb0854",
+            "file": "src/app/components/stat-item/stat-item.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-stat-item",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./stat-item.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "label",
+                    "defaultValue": "'Metric'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "value",
+                    "defaultValue": "'0'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-stat-item',\n  standalone: true,\n  templateUrl: './stat-item.html',\n  styleUrl: './stat-item.scss',\n})\nexport class StatItemComponent {\n  @Input() value: string = '0';\n  @Input() label: string = 'Metric';\n}\n",
+            "styleUrl": "./stat-item.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"stat\">\n  <span class=\"stat__value\">{{ value }}</span>\n  <span class=\"stat__label\">{{ label }}</span>\n</div>\n"
         }
     ],
     "modules": [],
@@ -420,6 +687,348 @@
                 "defaultValue": "{\n  providers: [\n    provideBrowserGlobalErrorListeners(),\n    provideRouter(routes)\n  ]\n}"
             },
             {
+                "name": "BorderRadiusFull",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"9999px\""
+            },
+            {
+                "name": "BorderRadiusLg",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"12px\""
+            },
+            {
+                "name": "BorderRadiusMd",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"8px\""
+            },
+            {
+                "name": "BorderRadiusNone",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"0px\""
+            },
+            {
+                "name": "BorderRadiusSm",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"4px\""
+            },
+            {
+                "name": "BorderRadiusXl",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"16px\""
+            },
+            {
+                "name": "ColorDanger100",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#f8d7da\""
+            },
+            {
+                "name": "ColorDanger500",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#dc3545\""
+            },
+            {
+                "name": "ColorNeutral0",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#ffffff\""
+            },
+            {
+                "name": "ColorNeutral100",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#f1f3f5\""
+            },
+            {
+                "name": "ColorNeutral1000",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#000000\""
+            },
+            {
+                "name": "ColorNeutral200",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#e9ecef\""
+            },
+            {
+                "name": "ColorNeutral300",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#dee2e6\""
+            },
+            {
+                "name": "ColorNeutral400",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#ced4da\""
+            },
+            {
+                "name": "ColorNeutral50",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#f8f9fa\""
+            },
+            {
+                "name": "ColorNeutral500",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#adb5bd\""
+            },
+            {
+                "name": "ColorNeutral600",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#6c757d\""
+            },
+            {
+                "name": "ColorNeutral700",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#495057\""
+            },
+            {
+                "name": "ColorNeutral800",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#343a40\""
+            },
+            {
+                "name": "ColorNeutral900",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#212529\""
+            },
+            {
+                "name": "ColorPrimary100",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#c5d8fd\""
+            },
+            {
+                "name": "ColorPrimary200",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#a2bffb\""
+            },
+            {
+                "name": "ColorPrimary300",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#7aa5f9\""
+            },
+            {
+                "name": "ColorPrimary400",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#5a8df7\""
+            },
+            {
+                "name": "ColorPrimary50",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#e8f0fe\"",
+                "rawdescription": "Do not edit directly, this file was auto-generated.",
+                "description": "<p>Do not edit directly, this file was auto-generated.</p>\n"
+            },
+            {
+                "name": "ColorPrimary500",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#3b74f5\""
+            },
+            {
+                "name": "ColorPrimary600",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#2f5dd4\""
+            },
+            {
+                "name": "ColorPrimary700",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#2247b3\""
+            },
+            {
+                "name": "ColorPrimary800",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#163291\""
+            },
+            {
+                "name": "ColorPrimary900",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#0a1e6f\""
+            },
+            {
+                "name": "ColorSuccess100",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#d4edda\""
+            },
+            {
+                "name": "ColorSuccess500",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#28a745\""
+            },
+            {
+                "name": "ColorWarning100",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#fff3cd\""
+            },
+            {
+                "name": "ColorWarning500",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"#ffc107\""
+            },
+            {
                 "name": "routes",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -428,10 +1037,405 @@
                 "deprecationMessage": "",
                 "type": "Routes",
                 "defaultValue": "[]"
+            },
+            {
+                "name": "ShadowLg",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"0 10px 15px rgba(0,0,0,0.1)\""
+            },
+            {
+                "name": "ShadowMd",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"0 4px 6px rgba(0,0,0,0.07)\""
+            },
+            {
+                "name": "ShadowSm",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"0 1px 2px rgba(0,0,0,0.05)\""
+            },
+            {
+                "name": "ShadowXl",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"0 20px 25px rgba(0,0,0,0.15)\""
+            },
+            {
+                "name": "Spacing0",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"0px\""
+            },
+            {
+                "name": "Spacing1",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"4px\""
+            },
+            {
+                "name": "Spacing10",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"40px\""
+            },
+            {
+                "name": "Spacing12",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"48px\""
+            },
+            {
+                "name": "Spacing16",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"64px\""
+            },
+            {
+                "name": "Spacing2",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"8px\""
+            },
+            {
+                "name": "Spacing20",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"80px\""
+            },
+            {
+                "name": "Spacing24",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"96px\""
+            },
+            {
+                "name": "Spacing3",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"12px\""
+            },
+            {
+                "name": "Spacing4",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"16px\""
+            },
+            {
+                "name": "Spacing5",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"20px\""
+            },
+            {
+                "name": "Spacing6",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"24px\""
+            },
+            {
+                "name": "Spacing8",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"32px\""
+            },
+            {
+                "name": "TypographyFontFamilyBase",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"'Inter', 'Noto Sans TC', sans-serif\""
+            },
+            {
+                "name": "TypographyFontFamilyMono",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"'JetBrains Mono', monospace\""
+            },
+            {
+                "name": "TypographyFontSize2xl",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"24px\""
+            },
+            {
+                "name": "TypographyFontSize3xl",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"30px\""
+            },
+            {
+                "name": "TypographyFontSize4xl",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"36px\""
+            },
+            {
+                "name": "TypographyFontSize5xl",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"48px\""
+            },
+            {
+                "name": "TypographyFontSizeBase",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"16px\""
+            },
+            {
+                "name": "TypographyFontSizeLg",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"18px\""
+            },
+            {
+                "name": "TypographyFontSizeSm",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"14px\""
+            },
+            {
+                "name": "TypographyFontSizeXl",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"20px\""
+            },
+            {
+                "name": "TypographyFontSizeXs",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"12px\""
+            },
+            {
+                "name": "TypographyFontWeightBold",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"700\""
+            },
+            {
+                "name": "TypographyFontWeightMedium",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"500\""
+            },
+            {
+                "name": "TypographyFontWeightRegular",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"400\""
+            },
+            {
+                "name": "TypographyFontWeightSemibold",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"600\""
+            },
+            {
+                "name": "TypographyLineHeightNormal",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"1.5\""
+            },
+            {
+                "name": "TypographyLineHeightRelaxed",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"1.75\""
+            },
+            {
+                "name": "TypographyLineHeightTight",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/styles/tokens/tokens.generated.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "\"1.25\""
             }
         ],
         "functions": [],
-        "typealiases": [],
+        "typealiases": [
+            {
+                "name": "ButtonSize",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"sm\" | \"md\" | \"lg\"",
+                "file": "src/app/components/button/button.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 193
+            },
+            {
+                "name": "ButtonVariant",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"primary\" | \"secondary\" | \"nav-cta\"",
+                "file": "src/app/components/button/button.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 193
+            },
+            {
+                "name": "CardSize",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"large\" | \"small\"",
+                "file": "src/app/components/card/card.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 193
+            },
+            {
+                "name": "CardVariant",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"default\" | \"alt\"",
+                "file": "src/app/components/card/card.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 193
+            }
+        ],
         "enumerations": [],
         "groupedVariables": {
             "src/app/app.config.ts": [
@@ -444,6 +1448,700 @@
                     "deprecationMessage": "",
                     "type": "ApplicationConfig",
                     "defaultValue": "{\n  providers: [\n    provideBrowserGlobalErrorListeners(),\n    provideRouter(routes)\n  ]\n}"
+                }
+            ],
+            "src/styles/tokens/tokens.generated.ts": [
+                {
+                    "name": "BorderRadiusFull",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"9999px\""
+                },
+                {
+                    "name": "BorderRadiusLg",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"12px\""
+                },
+                {
+                    "name": "BorderRadiusMd",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"8px\""
+                },
+                {
+                    "name": "BorderRadiusNone",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"0px\""
+                },
+                {
+                    "name": "BorderRadiusSm",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"4px\""
+                },
+                {
+                    "name": "BorderRadiusXl",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"16px\""
+                },
+                {
+                    "name": "ColorDanger100",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#f8d7da\""
+                },
+                {
+                    "name": "ColorDanger500",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#dc3545\""
+                },
+                {
+                    "name": "ColorNeutral0",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#ffffff\""
+                },
+                {
+                    "name": "ColorNeutral100",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#f1f3f5\""
+                },
+                {
+                    "name": "ColorNeutral1000",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#000000\""
+                },
+                {
+                    "name": "ColorNeutral200",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#e9ecef\""
+                },
+                {
+                    "name": "ColorNeutral300",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#dee2e6\""
+                },
+                {
+                    "name": "ColorNeutral400",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#ced4da\""
+                },
+                {
+                    "name": "ColorNeutral50",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#f8f9fa\""
+                },
+                {
+                    "name": "ColorNeutral500",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#adb5bd\""
+                },
+                {
+                    "name": "ColorNeutral600",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#6c757d\""
+                },
+                {
+                    "name": "ColorNeutral700",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#495057\""
+                },
+                {
+                    "name": "ColorNeutral800",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#343a40\""
+                },
+                {
+                    "name": "ColorNeutral900",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#212529\""
+                },
+                {
+                    "name": "ColorPrimary100",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#c5d8fd\""
+                },
+                {
+                    "name": "ColorPrimary200",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#a2bffb\""
+                },
+                {
+                    "name": "ColorPrimary300",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#7aa5f9\""
+                },
+                {
+                    "name": "ColorPrimary400",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#5a8df7\""
+                },
+                {
+                    "name": "ColorPrimary50",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#e8f0fe\"",
+                    "rawdescription": "Do not edit directly, this file was auto-generated.",
+                    "description": "<p>Do not edit directly, this file was auto-generated.</p>\n"
+                },
+                {
+                    "name": "ColorPrimary500",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#3b74f5\""
+                },
+                {
+                    "name": "ColorPrimary600",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#2f5dd4\""
+                },
+                {
+                    "name": "ColorPrimary700",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#2247b3\""
+                },
+                {
+                    "name": "ColorPrimary800",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#163291\""
+                },
+                {
+                    "name": "ColorPrimary900",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#0a1e6f\""
+                },
+                {
+                    "name": "ColorSuccess100",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#d4edda\""
+                },
+                {
+                    "name": "ColorSuccess500",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#28a745\""
+                },
+                {
+                    "name": "ColorWarning100",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#fff3cd\""
+                },
+                {
+                    "name": "ColorWarning500",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"#ffc107\""
+                },
+                {
+                    "name": "ShadowLg",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"0 10px 15px rgba(0,0,0,0.1)\""
+                },
+                {
+                    "name": "ShadowMd",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"0 4px 6px rgba(0,0,0,0.07)\""
+                },
+                {
+                    "name": "ShadowSm",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"0 1px 2px rgba(0,0,0,0.05)\""
+                },
+                {
+                    "name": "ShadowXl",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"0 20px 25px rgba(0,0,0,0.15)\""
+                },
+                {
+                    "name": "Spacing0",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"0px\""
+                },
+                {
+                    "name": "Spacing1",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"4px\""
+                },
+                {
+                    "name": "Spacing10",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"40px\""
+                },
+                {
+                    "name": "Spacing12",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"48px\""
+                },
+                {
+                    "name": "Spacing16",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"64px\""
+                },
+                {
+                    "name": "Spacing2",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"8px\""
+                },
+                {
+                    "name": "Spacing20",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"80px\""
+                },
+                {
+                    "name": "Spacing24",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"96px\""
+                },
+                {
+                    "name": "Spacing3",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"12px\""
+                },
+                {
+                    "name": "Spacing4",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"16px\""
+                },
+                {
+                    "name": "Spacing5",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"20px\""
+                },
+                {
+                    "name": "Spacing6",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"24px\""
+                },
+                {
+                    "name": "Spacing8",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"32px\""
+                },
+                {
+                    "name": "TypographyFontFamilyBase",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"'Inter', 'Noto Sans TC', sans-serif\""
+                },
+                {
+                    "name": "TypographyFontFamilyMono",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"'JetBrains Mono', monospace\""
+                },
+                {
+                    "name": "TypographyFontSize2xl",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"24px\""
+                },
+                {
+                    "name": "TypographyFontSize3xl",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"30px\""
+                },
+                {
+                    "name": "TypographyFontSize4xl",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"36px\""
+                },
+                {
+                    "name": "TypographyFontSize5xl",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"48px\""
+                },
+                {
+                    "name": "TypographyFontSizeBase",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"16px\""
+                },
+                {
+                    "name": "TypographyFontSizeLg",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"18px\""
+                },
+                {
+                    "name": "TypographyFontSizeSm",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"14px\""
+                },
+                {
+                    "name": "TypographyFontSizeXl",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"20px\""
+                },
+                {
+                    "name": "TypographyFontSizeXs",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"12px\""
+                },
+                {
+                    "name": "TypographyFontWeightBold",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"700\""
+                },
+                {
+                    "name": "TypographyFontWeightMedium",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"500\""
+                },
+                {
+                    "name": "TypographyFontWeightRegular",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"400\""
+                },
+                {
+                    "name": "TypographyFontWeightSemibold",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"600\""
+                },
+                {
+                    "name": "TypographyLineHeightNormal",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"1.5\""
+                },
+                {
+                    "name": "TypographyLineHeightRelaxed",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"1.75\""
+                },
+                {
+                    "name": "TypographyLineHeightTight",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/styles/tokens/tokens.generated.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "\"1.25\""
                 }
             ],
             "src/app/app.routes.ts": [
@@ -461,7 +2159,56 @@
         },
         "groupedFunctions": {},
         "groupedEnumerations": {},
-        "groupedTypeAliases": {}
+        "groupedTypeAliases": {
+            "src/app/components/button/button.ts": [
+                {
+                    "name": "ButtonSize",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"sm\" | \"md\" | \"lg\"",
+                    "file": "src/app/components/button/button.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 193
+                },
+                {
+                    "name": "ButtonVariant",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"primary\" | \"secondary\" | \"nav-cta\"",
+                    "file": "src/app/components/button/button.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 193
+                }
+            ],
+            "src/app/components/card/card.ts": [
+                {
+                    "name": "CardSize",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"large\" | \"small\"",
+                    "file": "src/app/components/card/card.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 193
+                },
+                {
+                    "name": "CardVariant",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"default\" | \"alt\"",
+                    "file": "src/app/components/card/card.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 193
+                }
+            ]
+        }
     },
     "routes": {
         "name": "<root>",
@@ -469,7 +2216,7 @@
         "children": []
     },
     "coverage": {
-        "count": 11,
+        "count": 2,
         "status": "low",
         "files": [
             {
@@ -499,6 +2246,82 @@
                 "name": "App",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/button/button.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/button/button.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "ButtonSize",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/button/button.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "ButtonVariant",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/card/card.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CardComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/card/card.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "CardSize",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/card/card.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "CardVariant",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/nav-link/nav-link.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NavLink",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/stat-item/stat-item.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "StatItemComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
@@ -535,6 +2358,696 @@
                 "name": "User",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "BorderRadiusFull",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "BorderRadiusLg",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "BorderRadiusMd",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "BorderRadiusNone",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "BorderRadiusSm",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "BorderRadiusXl",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorDanger100",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorDanger500",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorNeutral0",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorNeutral100",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorNeutral1000",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorNeutral200",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorNeutral300",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorNeutral400",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorNeutral50",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorNeutral500",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorNeutral600",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorNeutral700",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorNeutral800",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorNeutral900",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorPrimary100",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorPrimary200",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorPrimary300",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorPrimary400",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorPrimary50",
+                "coveragePercent": 100,
+                "coverageCount": "1/1",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorPrimary500",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorPrimary600",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorPrimary700",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorPrimary800",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorPrimary900",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorSuccess100",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorSuccess500",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorWarning100",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ColorWarning500",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ShadowLg",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ShadowMd",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ShadowSm",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ShadowXl",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Spacing0",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Spacing1",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Spacing10",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Spacing12",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Spacing16",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Spacing2",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Spacing20",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Spacing24",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Spacing3",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Spacing4",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Spacing5",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Spacing6",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Spacing8",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TypographyFontFamilyBase",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TypographyFontFamilyMono",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TypographyFontSize2xl",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TypographyFontSize3xl",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TypographyFontSize4xl",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TypographyFontSize5xl",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TypographyFontSizeBase",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TypographyFontSizeLg",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TypographyFontSizeSm",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TypographyFontSizeXl",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TypographyFontSizeXs",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TypographyFontWeightBold",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TypographyFontWeightMedium",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TypographyFontWeightRegular",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TypographyFontWeightSemibold",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TypographyLineHeightNormal",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TypographyLineHeightRelaxed",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/styles/tokens/tokens.generated.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TypographyLineHeightTight",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             }
         ]

@@ -1,9 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-stat-item',
-  imports: [],
+  standalone: true,
   templateUrl: './stat-item.html',
   styleUrl: './stat-item.scss',
 })
-export class StatItem {}
+export class StatItemComponent {
+  @Input() value: string = '0';
+  @Input() label: string = 'Metric';
+}

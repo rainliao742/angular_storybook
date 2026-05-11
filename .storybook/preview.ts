@@ -1,7 +1,6 @@
 import type { Preview } from '@storybook/angular'
 import { setCompodocJson } from "@storybook/addon-docs/angular";
 import docJson from "../documentation.json";
-import '../src/styles/tokens/_tokens.generated.css';
 setCompodocJson(docJson);
 
 const preview: Preview = {

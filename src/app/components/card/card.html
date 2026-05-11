@@ -1,1 +1,7 @@
-<p>card works!</p>
+<div class="card" [class]="'card--' + size + ' card--' + variant">
+  @if (tag) {
+    <span class="card__tag">{{ tag }}</span>
+  }
+  <h3 class="card__title">{{ title }}</h3>
+  <p class="card__description">{{ description }}</p>
+</div>

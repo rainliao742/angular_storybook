@@ -1,8 +1,6 @@
-// Auto-generated from Figma Tokens Studio — do not edit manually
-@use 'styles/tokens/tokens.generated' as *;
-
-// CSS Custom Properties (available globally)
-@import 'styles/tokens/_tokens.generated.css';
+// Design Tokens — auto-generated from Figma Tokens Studio
+@import './styles/tokens/tokens.generated';
+@import './styles/tokens/_tokens.generated.css';
 
 *, *::before, *::after {
   box-sizing: border-box;

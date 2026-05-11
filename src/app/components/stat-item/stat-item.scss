@@ -1,0 +1,20 @@
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-spacing-1);
+
+  &__value {
+    font-size: var(--ds-typography-font-size-4xl);
+    font-weight: var(--ds-typography-font-weight-bold);
+    color: var(--ds-color-primary-500);
+    line-height: var(--ds-typography-line-height-tight);
+  }
+
+  &__label {
+    font-size: var(--ds-typography-font-size-xs);
+    font-weight: var(--ds-typography-font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ds-color-neutral-500);
+  }
+}
