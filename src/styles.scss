@@ -1,0 +1,18 @@
+// Auto-generated from Figma Tokens Studio — do not edit manually
+@use 'styles/tokens/tokens.generated' as *;
+
+// CSS Custom Properties (available globally)
+@import 'styles/tokens/_tokens.generated.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ds-typography-font-family-base);
+  font-size: var(--ds-typography-font-size-base);
+  line-height: var(--ds-typography-line-height-normal);
+  color: var(--ds-color-neutral-900);
+  background-color: var(--ds-color-neutral-0);
+  margin: 0;
+}
