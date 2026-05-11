@@ -1,0 +1,38 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--ds-border-radius-full);
+  font-family: var(--ds-typography-font-family-base);
+  font-weight: var(--ds-typography-font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+
+  // Sizes
+  &--sm {
+    font-size: 10px;
+    padding: 2px var(--ds-spacing-2);
+  }
+  &--md {
+    font-size: var(--ds-typography-font-size-xs);
+    padding: var(--ds-spacing-1) var(--ds-spacing-3);
+  }
+
+  // Variants
+  &--default {
+    background-color: var(--ds-color-badge-bg-default);
+    color: var(--ds-color-badge-text-default);
+  }
+  &--success {
+    background-color: var(--ds-color-badge-bg-success);
+    color: var(--ds-color-badge-text-success);
+  }
+  &--danger {
+    background-color: var(--ds-color-badge-bg-danger);
+    color: var(--ds-color-badge-text-danger);
+  }
+  &--warning {
+    background-color: var(--ds-color-badge-bg-warning);
+    color: var(--ds-color-badge-text-warning);
+  }
+}

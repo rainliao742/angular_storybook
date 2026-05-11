@@ -31,6 +31,14 @@
   --ds-color-warning-500: #ffc107;
   --ds-color-danger-100: #f8d7da;
   --ds-color-danger-500: #dc3545;
+  --ds-color-badge-bg-default: #c5d8fd;
+  --ds-color-badge-text-default: #2247b3;
+  --ds-color-badge-bg-success: #d4edda;
+  --ds-color-badge-text-success: #28a745;
+  --ds-color-badge-bg-danger: #f8d7da;
+  --ds-color-badge-text-danger: #dc3545;
+  --ds-color-badge-bg-warning: #fff3cd;
+  --ds-color-badge-text-warning: #ffc107;
   --ds-typography-font-family-base: 'Inter', 'Noto Sans TC', sans-serif;
   --ds-typography-font-family-mono: 'JetBrains Mono', monospace;
   --ds-typography-font-size-xs: 12px;
